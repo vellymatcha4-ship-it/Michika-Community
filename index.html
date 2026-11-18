@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a9d7ff">
+  <meta name="description" content="Selamat datang di Michika Community — tempat berkumpul, berbagi, dan seru-seruan bersama!">
+  <title>Michika Community</title>
+  <style>
+    :root {
+      --blue: #8fc8ff;
+      --blue-deep: #559be8;
+      --ink: #42658b;
+      --paper: rgba(255,255,255,.88);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink);
+      font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(145deg,#eaf7ff,#c8e5ff 48%,#f7fbff);
+      min-height: 100vh;
+    }
+    .page { width: min(1120px, 92%); margin: 0 auto; padding: 24px 0 44px; }
+    header {
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding: 13px 20px; border: 2px solid white; border-radius: 24px;
+      background:var(--paper); box-shadow:0 8px 28px #75b7ef35;
+      position:sticky; top:12px; z-index:5; backdrop-filter:blur(12px);
+    }
+    .brand { font-weight:900; font-size:1.2rem; letter-spacing:.3px; color:#6eaff0; }
+    nav { display:flex; gap:8px; flex-wrap:wrap; }
+    nav a { color:#6c9fcf; text-decoration:none; font-weight:800; padding:8px 13px; border-radius:999px; }
+    nav a:hover { background:#e6f4ff; }
+    .hero {
+      margin-top:22px; overflow:hidden; border:5px solid white; border-radius:28px;
+      box-shadow:0 16px 45px #6eaeea35; background:white; position:relative;
+    }
+    .banner { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; }
+    .hero-content {
+      position:absolute; inset:auto 0 0; padding: clamp(18px,4vw,42px);
+      color:white; background:linear-gradient(0deg,rgba(38,91,151,.78),transparent);
+      text-shadow:0 2px 12px #315b8d80;
+    }
+    h1 { font-size:clamp(2.2rem,7vw,5rem); line-height:.98; margin:0 0 12px; font-weight:1000; }
+    .hero-content p { margin:0; font-size:clamp(.95rem,2vw,1.2rem); }
+    .intro {
+      margin:24px 0; display:grid; grid-template-columns: minmax(0,1.15fr) minmax(240px,.85fr);
+      gap:22px; align-items:stretch;
+    }
+    .panel {
+      background:var(--paper); border:2px solid white; border-radius:24px;
+      padding:clamp(20px,3vw,32px); box-shadow:0 10px 30px #75b7ef25;
+    }
+    h2 { margin:0 0 12px; color:#68a9e9; font-size:1.65rem; }
+    .panel p { line-height:1.7; margin:0 0 16px; }
+    .main-photo {
+      width:100%; height:100%; min-height:250px; object-fit:cover;
+      border-radius:18px; display:block; border:3px solid white;
+    }
+    .discord-panel { text-align:center; margin-top:22px; }
+    .discord-panel p { max-width:620px; margin:0 auto 20px; }
+    .discord-btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      background:linear-gradient(135deg,#78baff,#568fe4); color:white;
+      text-decoration:none; font-weight:900; font-size:1.12rem;
+      padding:15px 28px; border-radius:999px; border:3px solid white;
+      box-shadow:0 8px 0 #4b83c8,0 12px 24px #589de955;
+      transition:transform .18s, box-shadow .18s;
+    }
+    .discord-btn:hover { transform:translateY(-3px); box-shadow:0 11px 0 #4b83c8,0 16px 28px #589de955; }
+    .discord-btn:active { transform:translateY(4px); box-shadow:0 3px 0 #4b83c8; }
+    .discord-icon { width:24px; height:24px; fill:currentColor; }
+    footer { text-align:center; color:#7ba6ce; padding:26px 10px 4px; font-size:.9rem; }
+    @media (max-width:700px) {
+      .page { width:94%; padding-top:12px; }
+      header { position:static; flex-direction:column; }
+      nav { justify-content:center; }
+      nav a { padding:7px 10px; font-size:.9rem; }
+      .hero { border-radius:20px; }
+      .banner { aspect-ratio:4/5; }
+      .hero-content { padding:20px; }
+      .intro { grid-template-columns:1fr; }
+      .main-photo { min-height:0; aspect-ratio:1/1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="brand">✦ Michika Community</div>
+      <nav aria-label="Navigasi">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#discord">Discord</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <img class="banner" src="assets/michika-banner.png" alt="Banner Michika Community">
+      <div class="hero-content">
+        <h1>Michika<br>Community</h1>
+        <p>Tempat kumpul, ngobrol, dan seru-seruan bareng!</p>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <article class="panel">
+        <h2>Welcome to Michika! ♡</h2>
+        <p>Selamat datang di <strong>Michika Community</strong>! Yuk gabung dan jadi bagian dari komunitas kami. Temukan teman baru, ngobrol santai, dan nikmati kebersamaan di server Discord.</p>
+        <p>Klik tombol Discord di bawah untuk langsung membuka undangan server.</p>
+      </article>
+      <div class="panel" style="padding:12px">
+        <img class="main-photo" src="assets/michika-main.jpg" alt="Ilustrasi Michika">
+      </div>
+    </section>
+
+    <section class="panel discord-panel" id="discord">
+      <h2>Join Our Discord! 💙</h2>
+      <p>Tekan tombol di bawah. Link undangan Discord akan terbuka di tab baru, lalu kamu bisa bergabung ke Michika Community.</p>
+      <a class="discord-btn" href="https://discord.gg/e76bNH2uJ" target="_blank" rel="noopener noreferrer">
+        <svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.7 5.3A18.4 18.4 0 0 0 15.2 4l-.2.4c1.7.4 2.5 1 2.5 1a15.8 15.8 0 0 0-9 0s.9-.6 2.6-1L10.8 4a18.4 18.4 0 0 0-4.5 1.3C3.5 9.5 2.7 13.6 3.1 17.7a18 18 0 0 0 5.5 2.8l1.2-2a11 11 0 0 1-1.9-.9l.5-.4c3.7 1.7 7.7 1.7 11.3 0l.5.4a11 11 0 0 1-1.9.9l1.2 2a18 18 0 0 0 5.5-2.8c.5-4.8-.8-8.9-3.3-12.4ZM9 14.8c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 1 2 2.2-.9 2.2-2 2.2Zm6 0c-1.1 0-2-1-2-2.2s.9-2.2 2-2.2 2 1 2 2.2-.9 2.2-2 2.2Z"/></svg>
+        Join Discord
+      </a>
+    </section>
+
+    <footer>Made with ♡ for Michika Community</footer>
+  </main>
+</body>
+  </html>
+      
